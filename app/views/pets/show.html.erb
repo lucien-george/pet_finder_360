@@ -1,0 +1,9 @@
+<h1><%= @pet.name %></h1>
+<p><%= @pet.address %></p>
+<p><%= @pet.found_on %></p>
+<p><%= @pet.species %></p>
+<p><%= @pet.age %></p>
+<div style="width: 100px; height: 50px; background-color: <%= @pet.color %>"></div>
+<%= link_to 'back', pets_path, class:'link' %>
+<%= link_to 'edit', edit_pet_path(@pet.id) %>
+<%= link_to 'delete', pet_path(@pet.id), method: :delete, data: { confirm: 'Are you sure you want to destroy your pet?' } %>

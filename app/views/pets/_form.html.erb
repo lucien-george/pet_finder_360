@@ -1,0 +1,8 @@
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :age %>
+  <%= f.input :color, as: :color %>
+  <%= f.input :found_on, html5: true %>
+  <%= f.input :species, collection: Pet::SPECIES %>
+<% end %>
